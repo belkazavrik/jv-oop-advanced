@@ -30,15 +30,16 @@ public class Main {
 
     public static void getFigureList() {
         final Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier();
 
-        AbstractFigure circle = new Circle(random.nextInt(20), ColorSupplier.getRandomColor());
+        AbstractFigure circle = new Circle(random.nextInt(20), colorSupplier.getRandomColor());
         AbstractFigure trapezoid = new IsoscelesTrapezoid(random.nextInt(20),
-                random.nextInt(20), random.nextInt(20), ColorSupplier.getRandomColor());
+                random.nextInt(20), random.nextInt(20), colorSupplier.getRandomColor());
         AbstractFigure triangle = new RightTriangle(random.nextInt(20), random.nextInt(20),
-                ColorSupplier.getRandomColor());
+                colorSupplier.getRandomColor());
         AbstractFigure rectangle = new Rectangle(random.nextInt(20), random.nextInt(20),
-                ColorSupplier.getRandomColor());
-        AbstractFigure square = new Square(random.nextInt(20), ColorSupplier.getRandomColor());
+                colorSupplier.getRandomColor());
+        AbstractFigure square = new Square(random.nextInt(20), colorSupplier.getRandomColor());
 
         AbstractFigure [] figureList = new AbstractFigure[] {circle, trapezoid,
                 triangle, rectangle, square};
