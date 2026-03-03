@@ -9,7 +9,6 @@ public class Main {
     public static void main(String[] args) {
 
         FigureSupplier figureSupplier = new FigureSupplier();
-
         AbstractFigure [] figures = new AbstractFigure[6];
 
         for (int i = 0; i < figures.length / 2; i++) {
@@ -24,11 +23,12 @@ public class Main {
             System.out.println(f.getInfo());
         }
 
+        Main main = new Main();
         System.out.println();
-        getFigureList();
+        main.getFigureList();
     }
 
-    public static void getFigureList() {
+    public void getFigureList() {
         final Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -50,4 +50,5 @@ public class Main {
     }
 
 }
+
 
